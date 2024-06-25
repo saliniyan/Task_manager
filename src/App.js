@@ -1,13 +1,12 @@
+import Content from './Content';
+import Header from './Header';
 function App()
 {
-  function random()
-  {
-    const a=["hai","hello","welcome"];
-    const b=Math.floor(Math.random()*3);
-    return a[b];
-  }
   return(
-    <p>Now displays {random()}</p>
-  )
+    <div>
+    <Content />
+    <Header />
+    </div>
+  );
 }
 export default App;
