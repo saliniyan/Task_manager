@@ -1,9 +1,13 @@
 import React from 'react';
 function Head(){
+    const cs={
+        backgroundColor:'blue',
+        color:'white'
+    }
     return(
-        <div>
+        <h1 style={cs}>
             hello
-        </div>
+        </h1>
     );
 }
 export default Head;
