@@ -8,11 +8,11 @@ function Content()
     const b=Math.floor(Math.random()*3);
     return a[b];
   }
-  const [count,setcount]=useState(0);
+  const [count,setcount]=useState(10);
   function increment()
   {
-    setcount(count+1) //0+1
-    setcount(count+1) //will do the same operation (0+1) 
+    setcount((prevcount)=>{return prevcount+1}) //count is just a parameter can give any name
+    setcount(prevcount=> prevcount+1)
   }
   function decrement()
   {
