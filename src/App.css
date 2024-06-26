@@ -5,22 +5,16 @@ header {
   padding: 1rem;
   text-align: center;
 }
-
-
-main {
-  flex: 1;
+main{
   padding: 1rem;
-  background-color: antiquewhite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 footer {
   background-color: #54af4c;
   color: white;
   text-align: center;
   padding: 1rem;
-  flex-shrink: 0;
+  margin-top: auto; /* Push footer to bottom */
 }
 .container {
   display: flex;
