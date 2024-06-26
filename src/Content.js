@@ -7,12 +7,12 @@ function Content()
     const b=Math.floor(Math.random()*3);
     return a[b];
   }
-  const click=(name)=>{
-    console.log(`clicked ${name}`)
+  const click=(e)=>{
+    console.log(e)
   }
   return(
     <main>Now displays {random()}
-    <button onClick={()=>click("saliniyan")}>Click here</button>
+    <button onClick={(e)=>click(e)}>Click here</button>  {/*passing events*/}
     </main>
   )
 }
