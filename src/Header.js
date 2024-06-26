@@ -1,13 +1,9 @@
-import React from 'react';
+import './App.css'
 function Head(){
-    const cs={
-        backgroundColor:'blue',
-        color:'white'
-    }
     return(
-        <h1 style={cs}>
-            hello
-        </h1>
+        <header>
+            This is header
+        </header>
     );
 }
 export default Head;

@@ -1,4 +1,4 @@
-
+import './App.css'
 function Content()
 {
   function random()
@@ -7,8 +7,13 @@ function Content()
     const b=Math.floor(Math.random()*3);
     return a[b];
   }
+  const click=(name)=>{
+    console.log(`clicked ${name}`)
+  }
   return(
-    <p>Now displays {random()}</p>
+    <main>Now displays {random()}
+    <button onClick={()=>click("saliniyan")}>Click here</button>
+    </main>
   )
 }
-export default Content;
+export default Content; 
