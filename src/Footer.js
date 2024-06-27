@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
 
-function Footer() {
+function Footer(props) {
   const date = new Date();
   return (
     <footer>
       Date is {date.getDate()} {date.getFullYear()}
+      <br />
+      Total list {props.len===1?"item":"items"}
     </footer>
   );
 }

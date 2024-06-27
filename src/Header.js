@@ -1,9 +1,12 @@
 import './App.css'
-function Head(){
+function Head(props){ //or cn give object directly ({title})
     return(
         <header>
-            This is header
+         {props.title}
         </header>
     );
+}
+Head.defaultProps={
+    title:"Title here"
 }
 export default Head;
