@@ -7,7 +7,7 @@ function Footer(props) {
     <footer>
       Date is {date.getDate()} {date.getFullYear()}
       <br />
-      Total list {props.len===1?"item":"items"}
+      Total list {props.len} {props.len===1?"item":"items"}
     </footer>
   );
 }
