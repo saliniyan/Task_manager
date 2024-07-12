@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [items,setitems]=useState([
+    {
+      id:1,
+      status:true,
+      item:"play"
+    },
+    {
+      id:2,
+      status:true,
+      item:"eat"
+    },
+    {
+      id:3,
+      status:false,
+      item:"sleep"
+    }
+  ])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn new
-          Learn react
-        </a>
-      </header>
+      {items.map((i)=>(
+        <li>
+          <input 
+          type="checkbox"
+          checked={i.status}
+          />
+          <label>{i.item}</label>
+          <button>Delete</button>
+        </li>
+      ))}
     </div>
   );
 }
