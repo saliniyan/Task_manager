@@ -19,16 +19,25 @@ function App() {
       item:"sleep"
     }
   ])
+  const change=(id)=>{
+    const listitem=items.map((i)=>i.id===id? {...i,status:!i.status}:i)
+    setitems(listitem)
+  }
+  const handledelete=(id)=>{
+    const deleteitem=items.filter((i)=>i.id===id)
+    setitems(deleteitem)
+  }
   return (
     <div className="App">
       {items.map((i)=>(
-        <li>
+        <li key={i.id}>
           <input 
           type="checkbox"
+          onChange={()=> change(i.id)}
           checked={i.status}
           />
           <label>{i.item}</label>
-          <button>Delete</button>
+          <button onClick={()=>handledelete(i.id)}>Delete</button>
         </li>
       ))}
     </div>
