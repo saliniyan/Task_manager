@@ -2,6 +2,9 @@ import './App.css';
 import { useState } from 'react';
 import Add from './Add';
 import './Add.css';
+import Footer from './Footer'
+import './Footer.css'
+import Head from './Header'
 
 function App() {
   const [items,setitems]=useState([
@@ -21,6 +24,16 @@ function App() {
       item:"sleep"
     }
   ])
+  const [newitem,setnewitem]=useState('')
+
+  const additem=(item)=>
+  {
+    const id=items.length?items[items.length - 1].id +1 : 1
+    const addnewitem={id,status:false,item}
+    const listitem=[...items,addnewitem]
+    setitems(listitem)
+    localStorage.setItem("to_do_list",JSON.stringify(listitem))
+  }
 
   const change=(id)=>{
     const listitem=items.map((i)=>i.id===id? {...i,status:!i.status}:i)
@@ -33,19 +46,23 @@ function App() {
     localStorage.setItem("to_do_list",JSON.stringify(deleteitem))
   }
 
-  const [newitem,setnewitem]=useState('')
 
   const handlesubmit =(e)=>
   {
+    e.preventDefault() //to prevent default behaviour such as load when click sumbit
     if(!newitem)//if no value is passed
       return;
-    e.preventDefault() //to prevent default behaviour such as load when clivk sumbit
-    console.log(e)
+    console.log(newitem)
+    additem(newitem)
+    setnewitem('') //after click submit the input box should become empty again
   }
 
   return (
     <div>
-      <div className='add-container '>
+      <div className='header'>
+        <Head />
+      </div>
+      <div className='add-container'>
       <Add 
         newitem={newitem}
         setnewItem={setnewitem}
@@ -65,6 +82,7 @@ function App() {
         </li>
       ))}
     </div>
+    <div className='footer'><Footer no_of_item={items.length} /></div>
     </div>
   );
 }

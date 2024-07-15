@@ -1,0 +1,39 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(75, 75, 245);
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-text {
+    margin: 0; /* Remove default margins */
+    font-size: 16px;
+    color: #ffffff; /* Text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Optional: Add a text shadow for better readability */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(75, 75, 245);
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the header stays above other content */
+}
+
+.head-text {
+    margin: 0; /* Remove default margins */
+    font-size: 16px;
+    color: #ffffff; /* Text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Optional: Add a text shadow for better readability */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
