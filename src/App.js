@@ -5,6 +5,7 @@ import './Add.css';
 import Footer from './Footer'
 import './Footer.css'
 import Head from './Header'
+import { FaTrash } from "react-icons/fa6";
 
 function App() {
   const [items,setitems]=useState([
@@ -60,7 +61,7 @@ function App() {
   return (
     <div>
       <div className='header'>
-        <Head />
+      <Head />
       </div>
       <div className='add-container'>
       <Add 
@@ -78,7 +79,7 @@ function App() {
           checked={i.status}
           />
           <label onDoubleClick={()=> change(i.id)}>{i.item}</label>
-          <button onClick={()=>handledelete(i.id)}>Delete</button>
+          <button onClick={()=>handledelete(i.id)}><FaTrash /></button>
         </li>
       ))}
     </div>
