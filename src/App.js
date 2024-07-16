@@ -8,7 +8,7 @@ import Head from './Header'
 import { FaTrash } from "react-icons/fa6";
 
 function App() {
-  const [items,setitems]=useState(JSON.parse(localStorage.getItem('to_do_list')))
+  const [items,setitems]=useState([])
   const [newitem,setnewitem]=useState('')
 
   const additem=(item)=>
@@ -33,9 +33,9 @@ function App() {
 
   useEffect(()=>
   {
-    console.log("Rendering")   //this will run each time it is render
+    JSON.parse(localStorage.getItem('to_do_list')) //this will run each time it is render
   },[items]) //this is dependency now it depends on items whenever state of items is change it will run
-  
+
   const handlesubmit =(e)=>
   {
     e.preventDefault() //to prevent default behaviour such as load when click sumbit
