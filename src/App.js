@@ -8,23 +8,7 @@ import Head from './Header'
 import { FaTrash } from "react-icons/fa6";
 
 function App() {
-  const [items,setitems]=useState([
-    {
-      id:1,
-      status:true,
-      item:"play"
-    },
-    {
-      id:2,
-      status:true,
-      item:"eat"
-    },
-    {
-      id:3,
-      status:false,
-      item:"sleep"
-    }
-  ])
+  const [items,setitems]=useState(JSON.parse(localStorage.getItem('to_do_list')))
   const [newitem,setnewitem]=useState('')
 
   const additem=(item)=>
@@ -70,19 +54,22 @@ function App() {
         handlesubmit={handlesubmit}
       />
       </div>
+    {(items.length) ? (
     <div className="App">
       {items.map((i)=>(
         <li key={i.id}>
-          <input 
-          type="checkbox"
-          onChange={()=> change(i.id)}
-          checked={i.status}
-          />
-          <label onDoubleClick={()=> change(i.id)}>{i.item}</label>
-          <button onClick={()=>handledelete(i.id)}><FaTrash /></button>
+        <input 
+        type="checkbox"
+        onChange={()=> change(i.id)}
+        checked={i.status}
+        />
+        <label onDoubleClick={()=> change(i.id)}>{i.item}</label>
+        <button onClick={()=>handledelete(i.id)}><FaTrash /></button>
         </li>
-      ))}
+    ))}
     </div>
+      ) : (<p>List is Empty</p>)
+      }
     <div className='footer'><Footer no_of_item={items.length} /></div>
     </div>
   );
