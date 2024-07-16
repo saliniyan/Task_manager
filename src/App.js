@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import Add from './Add';
 import './Add.css';
 import Footer from './Footer'
@@ -31,13 +31,16 @@ function App() {
     localStorage.setItem("to_do_list",JSON.stringify(deleteitem))
   }
 
-
+  useEffect(()=>
+  {
+    console.log("Rendering")   //this will run each time it is render
+  },[items]) //this is dependency now it depends on items whenever state of items is change it will run
+  
   const handlesubmit =(e)=>
   {
     e.preventDefault() //to prevent default behaviour such as load when click sumbit
     if(!newitem)//if no value is passed
       return;
-    console.log(newitem)
     additem(newitem)
     setnewitem('') //after click submit the input box should become empty again
   }
