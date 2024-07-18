@@ -1,5 +1,5 @@
 import './App.css';
-import { useState,useEffect } from 'react';
+import { useState} from 'react';
 import Add from './Add';
 import './Add.css';
 import Footer from './Footer'
@@ -8,7 +8,7 @@ import Head from './Header'
 import { FaTrash } from "react-icons/fa6";
 
 function App() {
-  const [items,setitems]=useState([])
+  const [items,setitems]=useState(JSON.parse(localStorage.getItem('to_do_list')) || [])
   const [newitem,setnewitem]=useState('')
 
   const additem=(item)=>
@@ -30,11 +30,6 @@ function App() {
     setitems(deleteitem)
     localStorage.setItem("to_do_list",JSON.stringify(deleteitem))
   }
-
-  useEffect(()=>
-  {
-    JSON.parse(localStorage.getItem('to_do_list')) //this will run each time it is render
-  },[items]) //this is dependency now it depends on items whenever state of items is change it will run
 
   const handlesubmit =(e)=>
   {
