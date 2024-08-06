@@ -1,6 +1,6 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
+  background-color: #c8edb3;
   display: flex;
   justify-content: center; 
   align-items: center; 
@@ -11,7 +11,7 @@ body {
 .App-container {
   width: 100%;
   max-width: 500px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative; /* Added to position the fixed header and footer */
@@ -35,8 +35,8 @@ ul {
 li {
   padding: 15px 10px;
   margin-bottom: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  background-color: #f4ffde;
+  border: 1px solid #92db6b;
   border-radius: 4px;
   display: flex;
   justify-content: space-between;

@@ -3,7 +3,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(11, 174, 2);
+    background-color:rgb(54, 162, 56);
     text-align: center;
     padding: 30px 0;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
@@ -13,8 +13,8 @@
     margin: 0; /* Remove default margins */
     font-size: 16px;
     color: #ffffff; /* Text color */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Optional: Add a text shadow for better readability */
-    font-weight: bold; /* Optional: Make the text bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a text shadow for better readability */
+    font-weight: bold; /*Make the text bold */
 }
 
 .header {
@@ -22,7 +22,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(75, 75, 245);
+    background-color:rgb(54, 162, 56);
     text-align: center;
     padding: 30px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -33,7 +33,7 @@
     margin: 0; /* Remove default margins */
     font-size: 16px;
     color: #ffffff; /* Text color */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Optional: Add a text shadow for better readability */
-    font-weight: bold; /* Optional: Make the text bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /*Add a text shadow for better readability */
+    font-weight: bold; /*   Make the text bold */
 }
 
