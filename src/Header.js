@@ -2,7 +2,7 @@ import './Footer.css'
 const Head=()=>{
     return(
         <div>
-        <p className='head-text'>Welcome to to do list</p>
+        <p className='head-text'>Consistency is the key to Success</p>
         </div>
     )
 }

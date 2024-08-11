@@ -1,6 +1,27 @@
-.add-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    margin-top: 50px;
-  }
+.add{
+  font-family: 'Arial', 'Times New Roman', Times, serif;
+  font-size: x-large;
+  color: green;
+}
+.add-form {
+  display: flex;
+  align-items: center;
+}
+
+.input-box {
+  width: 100%;
+  max-width: 190px;
+  max-height: 50px;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #92db6b;
+  border-radius: 4px;
+  background-color: #f4ffde;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.input-box::placeholder {
+  color: #aaaaaa;
+}

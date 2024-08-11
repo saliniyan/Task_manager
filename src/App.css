@@ -45,7 +45,7 @@ li {
 
 
 button {
-  background-color: #283be7;
+  background-color: green;
   color: #fff;
   border: none;
   padding: 5px 10px;
@@ -55,9 +55,11 @@ button {
 }
 
 button:hover {
-  background-color: #f50f0f;
+  background-color: rgb(2, 95, 2);
 }
 
 input[type="checkbox"] {
   margin-right: 20px;
 }
+
+
