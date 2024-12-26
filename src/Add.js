@@ -30,4 +30,4 @@ const Add =({newitem,setnewItem,handlesubmit}) =>{
     )
 
 }
-export default Add
+export default Add;

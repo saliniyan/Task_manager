@@ -1,27 +1,50 @@
-.add{
-  font-family: 'Arial', 'Times New Roman', Times, serif;
-  font-size: x-large;
-  color: green;
+.add {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-family: 'Arial, sans-serif';
 }
-.add-form {
+
+form {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .input-box {
-  width: 100%;
-  max-width: 190px;
-  max-height: 50px;
-  height: 40px;
+  width: 300px;
   padding: 10px;
-  font-size: 16px;
-  border: 1px solid #92db6b;
-  border-radius: 4px;
-  background-color: #f4ffde;
-  color: black;
-  margin-right: 10px;
+  font-size: 18px;
+  font-family: 'Patrick Hand', cursive; /* Handwriting style */
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  transition: border-color 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.input-box::placeholder {
-  color: #aaaaaa;
+.input-box:focus {
+  border-color: #007bff;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Patrick Hand', cursive;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #0056b3;
 }

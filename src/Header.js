@@ -1,4 +1,5 @@
 import './Footer.css'
+
 const Head=()=>{
     return(
         <div>

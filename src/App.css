@@ -1,65 +1,58 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #c8edb3;
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 100vh;
+  font-family: 'Dancing Script', cursive;
   margin: 0;
-}
-
-.App-container {
-  width: 100%;
-  max-width: 500px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: relative; /* Added to position the fixed header and footer */
+  padding: 0;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.08) 1px,
+      transparent 1px
+    ),
+    rgba(255, 255, 255, 0.9);
+  background-size: 100% 80px; /* Horizontal lines spaced 30px apart */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .App {
-  padding: 60px 20px 60px 20px; /* Added padding to prevent overlap with fixed header and footer */
-}
-
-.add-container {
-  margin-top: 20px;
-}
-
-/* List styling */
-ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 20px auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 li {
-  padding: 15px 10px;
-  margin-bottom: 10px;
-  background-color: #f4ffde;
-  border: 1px solid #92db6b;
-  border-radius: 4px;
+  font-size: 20px;
+  padding: 10px 20px;  
+  margin: 10px 0;
+  color: #444;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: center;  
+  justify-content: flex-start; 
+  background: none;
+  border: none;
+  width: auto;
+  box-shadow: none;
+  margin-left: 43%;
 }
 
 
+input[type="checkbox"] {
+  margin-right: 10px;  
+}
+
 button {
-  background-color: green;
-  color: #fff;
+  background: none;
   border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  color: #d11a2a;
+  font-size: 18px;
+  margin-left: 20px;  
 }
 
 button:hover {
-  background-color: rgb(2, 95, 2);
+  color: #ff4b5c;
 }
-
-input[type="checkbox"] {
-  margin-right: 20px;
-}
-
-

@@ -1,0 +1,23 @@
+body {
+    font-family: 'Patrick Hand', cursive;
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+  }
+  
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  li {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 18px;
+  }
+  
+  p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 18px;
+    text-align: center;
+  }
+  
