@@ -1,0 +1,45 @@
+/* Header.css */
+.header {
+    margin-bottom: 30px;
+    text-align: center;
+    background: #1e1e1e;
+    padding: 25px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #6b42ff, #9876ff);
+    box-shadow: 0 0 10px rgba(107, 66, 255, 0.6);
+  }
+  
+  .head-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(107, 66, 255, 0.5);
+    padding: 5px 0;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .head-text::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #6b42ff;
+    border-radius: 3px;
+  }

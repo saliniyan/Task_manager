@@ -1,58 +1,93 @@
-body {
-  font-family: 'Dancing Script', cursive;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.08) 1px,
-      transparent 1px
-    ),
-    rgba(255, 255, 255, 0.9);
-  background-size: 100% 80px; /* Horizontal lines spaced 30px apart */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
+/* App.css */
 .App {
-  list-style: none;
-  padding: 0;
-  margin: 20px auto;
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-position: 0 30px;
+}
+
+.App li {
+  display: flex;
+  align-items: center;
+  background-color: rgba(45, 45, 45, 0.8);
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-size: 1.15rem;
+  /* Note paper effect */
+  border-left: 4px solid #6b42ff;
+}
+
+.App li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.App li input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  margin-right: 18px;
+  accent-color: #6b42ff;
+}
+
+.App li label {
   flex-grow: 1;
+  word-break: break-word;
+  transition: color 0.2s;
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: 1.15rem;
+}
+
+.App li input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.App li button {
+  background: transparent;
+  color: #ff5252;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App li button:hover {
+  background-color: rgba(255, 82, 82, 0.15);
+  transform: scale(1.1);
+}
+
+.App p {
+  text-align: center;
+  margin: 30px 0;
+  color: #888;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.add-container {
+  margin-bottom: 30px;
+}
+
+/* Main wrapper for layout structure */
+.main-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  min-height: 100vh;
 }
 
-li {
-  font-size: 20px;
-  padding: 10px 20px;  
-  margin: 10px 0;
-  color: #444;
-  display: flex;
-  align-items: center;  
-  justify-content: flex-start; 
-  background: none;
-  border: none;
-  width: auto;
-  box-shadow: none;
-  margin-left: 43%;
-}
-
-
-input[type="checkbox"] {
-  margin-right: 10px;  
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #d11a2a;
-  font-size: 18px;
-  margin-left: 20px;  
-}
-
-button:hover {
-  color: #ff4b5c;
+.content-wrapper {
+  flex: 1;
 }

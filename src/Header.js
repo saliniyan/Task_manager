@@ -1,4 +1,4 @@
-import './Footer.css'
+import './Header.css'
 
 const Head=()=>{
     return(

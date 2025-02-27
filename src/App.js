@@ -41,34 +41,36 @@ function App() {
   }
 
   return (
-    <div>
-      <div className='header'>
-      <Head />
+    <div className="main-wrapper">
+      <div className="content-wrapper">
+        <div className='header'>
+          <Head />
+        </div>
+        <div className='add-container'>
+          <Add
+            newitem={newitem}
+            setnewItem={setnewitem}
+            handlesubmit={handlesubmit}
+          />
+        </div>
+        {(items.length) ? (
+          <div className="App">
+            {items.map((i) => (
+              <li key={i.id}>
+                <input
+                  type="checkbox"
+                  onChange={() => change(i.id)}
+                  checked={i.status}
+                />
+                <label onDoubleClick={() => change(i.id)}>{i.item}</label>
+                <button onClick={() => handledelete(i.id)}><FaTrash /></button>
+              </li>
+            ))}
+          </div>
+        ) : (<p>List is Empty</p>)
+        }
       </div>
-      <div className='add-container'>
-      <Add 
-        newitem={newitem}
-        setnewItem={setnewitem}
-        handlesubmit={handlesubmit}
-      />
-      </div>
-    {(items.length) ? (
-    <div className="App">
-      {items.map((i)=>(
-        <li key={i.id}>
-        <input 
-        type="checkbox"
-        onChange={()=> change(i.id)}
-        checked={i.status}
-        />
-        <label onDoubleClick={()=> change(i.id)}>{i.item}</label>
-        <button onClick={()=>handledelete(i.id)}><FaTrash /></button>
-        </li>
-    ))}
-    </div>
-      ) : (<p>List is Empty</p>)
-      }
-    <div className='footer'><Footer no_of_item={items.length} /></div>
+      <div className='footer'><Footer no_of_item={items.length} /></div>
     </div>
   );
 }
